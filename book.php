@@ -1,0 +1,87 @@
+<?php
+  
+  include( 'db.php');
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="book.css">
+    <script src="validation.js" defer></script>
+    <style>
+      .errors{
+            display: none;
+        }
+        .errors.show{
+            display: block;
+            color: white;
+        }
+        .errors.show {
+            list-style: none;
+            padding: 10px;
+            padding-left: 30px;
+            border-radius: 5px;
+            background-color: #f8d7da;
+            color: #721c24;
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+        <div class="navbar">
+          <img src="./images/Curiosity Hotel.svg" alt="" />
+          <a href="./Announcements.php">Announcements</a>
+        <a href="./info.php">Information</a>
+        <a href="./book.php">Book Now</a>
+        <a href="./contactus.php">Contact Us</a>
+        </div>
+      </nav>
+      <div class="errors">
+        <h3 class="error-title">Error</h3>
+        <ul class="errors-list">
+
+        </ul>
+      </div>
+      <div class="bookForm">
+        <h1 class="bookFormTitle">Book a Room by Filling Out This Form</h1>
+        <form action="book.php" method="post" id="form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name"><br>
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin" name="checkin" ><br>
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout" name="checkout" ><br>
+            <label for="adults">Number of Adults</label>
+            <input type="number" id="adults" name="adults" placeholder="Number of Adults"><br>
+            <label for="number">Contact Number</label>
+            <input type="tel" id="number" name="number" placeholder="Contact Number"><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email"><br>
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" cols="30" rows="4" placeholder="Comment"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+      </div>
+</body>
+</html>
+<?php
+    $name = $_POST['name'];
+    $checkin = $_POST['checkin'];
+    $checkout = $_POST['checkout'];
+    $adults = $_POST['adults'];
+    $number = $_POST['number'];
+    $email = $_POST['email'];
+    $comment = $_POST['comment'];
+    $query = "INSERT INTO bookings (Name, CheckIn, CheckOut, NoOfAdults, ContactNo, Email, Comment) VALUES ('$name', '$checkin', '$checkout', '$adults', '$number', '$email', '$comment')";
+    $result = mysqli_query($connection, $query);
+  mysqli_close($connection);
+  ?>

@@ -1,0 +1,128 @@
+:root {
+  --Light-grayish-blue: #daebf5;
+  --Very-soft-blue: #92cae1;
+  --White: #daebf5;
+  --Very-Dark-Blue: #0c1418;
+  --Moderate-Blue: #4840cb;
+  --Dark-Blue: #252c8a;
+  --Blueish-Black: #040a0d;
+  --Dark-Blueish-Black: #070d1a;
+}
+* {
+  color: var(--White);
+  font-family: "Poppins", sans-serif;
+}
+.annTitle {
+  color: var(--Very-soft-blue);
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px;
+}
+.announcement {
+  background-color: var(--Dark-Blueish-Black);
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+}
+.offers {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.offer {
+  background-color: var(--Dark-Blueish-Black);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  text-align: center;
+  line-height: 50px;
+  width: 100%;
+}
+.offer p {
+  font-size: 1.2rem;
+  text-align: left;
+  color: var(--Very-soft-blue);
+  font-weight: 300;
+  line-height: 36px;
+}
+.faq {
+  width: 85%;
+  max-width: 1000px;
+  margin: 100px auto;
+  justify-content: center;
+  margin-bottom: 300px
+}
+.faq h1 {
+  color: var(--Very-soft-blue);
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+.questionCard::after {
+  content: "\002B";
+  font-size: 2.2rem;
+  color: var(--Very-soft-blue);
+  margin-top: -10px;
+  transition: 0.2s;
+}
+.questionCard {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--Dark-Blueish-Black);
+  border-radius: 20px;
+  padding: 20px;
+}
+.faqCard.active .questionCard::after {
+    transform: rotate(45deg);
+  }
+.faqCard {
+  margin-bottom: 20px;
+}
+.faqCard.active .ans {
+  max-height: 300px;
+  transition: max-height 0.5s ease-in-out;
+}
+.faqCard.active .ans {
+  padding: 20px;
+  padding-top: 0;
+}
+.faqCard.active .ans p {
+  animation: fade 0.5s ease-in-out;
+}
+.faqCard.active .questionCard {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ans {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--Dark-Blueish-Black);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.questionTitle {
+  font-size: 1.3rem;
+  color: var(--Very-soft-blue);
+  line-height: 36px;
+}
+.questionCard img {
+  cursor: pointer;
+  margin-left: auto;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

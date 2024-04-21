@@ -1,0 +1,39 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.bookFormTitle{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--Very-soft-blue);
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 72px;
+}
+form{
+    width: 60%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+input, textarea, select{
+    margin: 10px 0;
+    padding: 15px;
+    border: 2px solid var(--White);
+    background-color: #daebf5;
+    border-radius: 15px;
+    font-size: 1.2rem;
+}
+label{
+    font-size: 2rem;
+    color: var(--Very-soft-blue);
+}
+button{
+    width:  40%;
+    padding: 20px 20px;
+    border: none;
+    background-color: #252C8A;
+    color: var(--White);
+    border-radius: 15px;
+    font-size: 1.5rem;
+}

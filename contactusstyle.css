@@ -1,0 +1,112 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.contactTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--Very-soft-blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.locationDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: var(--White);
+  text-align: center;
+  font-size: 1.5rem;
+}
+.location {
+  margin: 20px;
+}
+.locationDiv img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  gap: 20px;
+}
+.teamCard {
+  background-color: var(--Very-Dark-Blue);
+  width: 300px;
+  height: 300px;
+  color: var(--White);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+.teamCard img {
+    width: 100px;
+    height: 100px;
+    margin-top: 2rem;
+}
+.teamCard h1 {
+    margin-bottom: 20px;
+}
+.teamCard h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.teamCard::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(151, 71, 255, 0.1),
+    transparent 40%
+  );
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  content: "";
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.teamCard:hover::before {
+  opacity: 1;
+}
+.sendUs {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.sendUs h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Very-soft-blue);
+  margin-bottom: 1.5rem;
+}
+.sendUs textarea {
+  width: 50%;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 10px;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--White);
+}
+input[type="submit"] {
+  background-color: var(--Very-soft-blue);
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+}
+

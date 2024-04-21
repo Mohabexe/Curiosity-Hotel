@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Kenia&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.kenia-regular {
+  font-family: "Kenia", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --Light-grayish-blue: #daebf5;
+  --Very-soft-blue: #92cae1;
+  --White: #DAEBF5;
+  --Very-Dark-Blue: #0c1418;
+  --Moderate-Blue: #4840cb;
+  --Dark-Blue: #252c8a;
+  --Blueish-Black: #040a0d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+body {
+  background-color: var(--Blueish-Black);
+}
+/* Navbar */
+nav {
+  width: 74.5%;
+  margin: 100px auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5625rem;
+  font-family: "poppins", sans-serif;
+}
+.navbar a {
+  transition: color 0.2s ease-in-out;
+}
+.navbar a:hover {
+  color: var(--Very-soft-blue);
+}
+/* Hero */
+.hero {
+  display: flex;
+  width: 74.5%;
+  margin: 0 auto;
+}
+.heroHeader {
+  font-size: 2.8125rem;
+  font-family: "poppins", sans-serif;
+  color: var(--Very-soft-blue);
+  font-weight: 800;
+  line-height: 50.4px;
+  width: 90%;
+}
+.heroParagraph {
+  font-size: 1.6875rem;
+  margin-top: 20px;
+  color: var(--Light-grayish-blue);
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  line-height: 30.24px;
+  width: 95%;
+}
+.hero .right img {
+  margin-top: -100px;
+}
+.book {
+  width: 295px;
+  height: 90px;
+  border-radius: 12px;
+  background-color: var(--Moderate-Blue);
+  border: none;
+  color: var(--White);
+  font-family: "poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.book:hover {
+  background-color: var(--Dark-Blue);
+}
+/* Vision and Mission cards */
+.vm {
+  display: flex;
+  width: 74.5%;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin: 20px;
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 30px;
+  position: relative;
+}
+/* Cards effect */
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(151, 71, 255, 0.1),
+    transparent 40%
+  );
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  content: "";
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card img {
+  height: 114px;
+  width: 196px;
+  margin: 0 auto;
+}
+.card h1 {
+  font-family: Poppins;
+  font-size: 2.625rem;
+  font-weight: 800;
+  line-height: 63px;
+  text-align: center;
+  color: var(--White);
+  margin: 20px;
+}
+.card p {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: left;
+  color: var(--Light-grayish-blue);
+  margin: 20px 0;
+}
+/* Gallery */
+.gallery {
+  width: 74.5%;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  text-align: center;
+}
+.gallery h1 {
+  font-family: Poppins;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 60.48px;
+  text-align: center;
+  color: var(--Very-soft-blue);
+  width: 68%;
+  margin: 50px auto;
+}
+.imgs {
+  align-items: center;
+  margin-top: 50px;
+}
+.imgs img {
+  padding: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+.imgs img:hover {
+  transform: scale(1.02);
+}
